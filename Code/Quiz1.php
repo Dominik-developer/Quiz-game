@@ -7,8 +7,8 @@
     <meta name="description" content="Najepszy quiz w internecie"/>
     <meta name="keywords" content="Quiz" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="author" content="Dominik Szczepański" />
-    <link rel="stylesheet"href="Quiz1.css" type="text/css" />
+    <meta name="author" content="Dominik" />
+    <link rel="stylesheet"href="styles.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">    
     <link rel="stylesheet"href="quiz_css/fontello.css" type="text/css" />
 </head>
@@ -46,16 +46,9 @@
                         <li><a href="autor.php">Autor</a></li>
                     </ul>                              
                 </li>
-                
-
-
             </ol>
-
-
         </div>
     </div>  
-
-
 
     <?php
         for($i=1; $i<=10; $i++)
@@ -82,88 +75,84 @@
 
     ?>
 
-    <form action=Quiz2.php method="post">
-<div class="content">
+        <form action=Quiz2.php method="post">
+            
+    <div class="content">
 
-        <?php
-            for($j=1; $j<=10; $j++)
-            {
-            $z=fopen('quiz.txt', 'r');
-        
-            for($i=1;$i<=5*$tab[$j];$i++)
-            fgets($z);
-        ?>
+        <!--<form action=Quiz2.php method="post">-->
 
-
-
-
-
-        <div class="pytanie">
             <?php
-                $t = fgets($z);
-                echo $t;
-                $k=0;
+                for($j=1; $j<=10; $j++)
+                {
+                $z=fopen('quiz.txt', 'r');
+            
+                for($i=1;$i<=5*$tab[$j];$i++)
+                fgets($z);
             ?>
-        </div>
-        
-        <div class="odp">
-            <input type="radio" value="A" name="<?php echo $j ?>" id="<?php echo $k+4*$tab[$j]?>">
-                <label for="<?php echo $k+4*$tab[$j]?>">
-                    <?php
-                        $t = fgets($z);
-                        echo $t;
-                        $k++;
-                    ?>
-                </label>
-        </div>
+
+            <div class="pytanie">
+                <?php
+                    $t = fgets($z);
+                    echo $t;
+                    $k=0;
+                ?>
+            </div>
             
-        <div class="odp">
-            <input type="radio" value="B" name="<?php echo $j ?>" id="<?php echo $k+4*$tab[$j]?>">
-                <label for="<?php echo $k+4*$tab[$j]?>">
-                    <?php
-                        $t = fgets($z);
-                        echo $t;
-                        $k++;
-                    ?>
+            <div class="odp">
+                <input type="radio" value="A" name="<?php echo $j ?>" id="<?php echo $k+4*$tab[$j]?>">
+                    <label for="<?php echo $k+4*$tab[$j]?>">
+                        <?php
+                            $t = fgets($z);
+                            echo $t;
+                            $k++;
+                        ?>
+                    </label>
+            </div>
+                
+            <div class="odp">
+                <input type="radio" value="B" name="<?php echo $j ?>" id="<?php echo $k+4*$tab[$j]?>">
+                    <label for="<?php echo $k+4*$tab[$j]?>">
+                        <?php
+                            $t = fgets($z);
+                            echo $t;
+                            $k++;
+                        ?>
+                    </label>
+            </div>
+
+            <div class="odp">
+                <input type="radio" value="C" name="<?php echo $j ?>" id="<?php echo $k+4*$tab[$j]?>">
+                    <label for="<?php echo $k+4*$tab[$j]?>">
+                        <?php
+                            $t = fgets($z);
+                            echo $t;
+                            $k++;
+                        ?>
                 </label>
-        </div>
+            </div>
 
-        <div class="odp">
-            <input type="radio" value="C" name="<?php echo $j ?>" id="<?php echo $k+4*$tab[$j]?>">
-                <label for="<?php echo $k+4*$tab[$j]?>">
-                    <?php
-                        $t = fgets($z);
-                        echo $t;
-                        $k++;
-                    ?>
-            </label>
-        </div>
+            <div class="odp">
+                <input type="radio" value="D" name="<?php echo $j ?>" id="<?php echo $k+4*$tab[$j]?>">
+                    <label for="<?php echo $k+4*$tab[$j]?>">
+                        <?php
+                            $t = fgets($z);
+                            echo $t;
+                            fclose($z);
+                        ?>
+                    </label>
+            </div>
+                
+            <br>
+            <?php
+                }      
+            ?>
+            <div class="input">
 
-        <div class="odp">
-            <input type="radio" value="D" name="<?php echo $j ?>" id="<?php echo $k+4*$tab[$j]?>">
-                <label for="<?php echo $k+4*$tab[$j]?>">
-                    <?php
-                        $t = fgets($z);
-                        echo $t;
-                        fclose($z);
-                    ?>
-                </label>
-        </div>
-            
-        <br>
-        <?php
-            }      
-        ?>
-        <div class="input">
-
-        <input type="submit" class="guzik" value="Sprawdź">
-        </form>
-        <br><br>
-        </div>
-</div>
-
-    
-
+            <input type="submit" class="guzik" value="Sprawdź">
+            </form>
+            <br><br>
+            </div>
+    </div>
 
         <div class="socials">
             <div class="socialdivs">  
@@ -183,13 +172,16 @@
             </div>
         </div>
         <div class="footer">
-             Dominik Szczepański - najquiz.com &copy; 2023 
+             Dominik - najquiz.com &copy; 2023 - <?php echo date('Y'); ?>
         </div>
 
-	<script src="jquery-1.11.3.min.js"></script>
-	
-    <script>
 
+
+    <!-- JS script: sticki menu & jQuery -->
+
+    <script src="jquery-1.11.3.min.js"></script>
+
+    <script>
         $(document).ready(function() {
         var NavY = $('.nav').offset().top;
         
@@ -209,7 +201,6 @@
             stickyNav();
         });
         });
-	
     </script>
 
 </body>

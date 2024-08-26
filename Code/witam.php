@@ -7,8 +7,8 @@
     <meta name="description" content="Najepszy quiz w internecie"/>
     <meta name="keywords" content="Quiz" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="author" content="Dominik Szczepański" />
-    <link rel="stylesheet"href="Quiz1.css" type="text/css" />
+    <meta name="author" content="Dominik" />
+    <link rel="stylesheet"href="styles.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="stylesheet"href="quiz_css/fontello.css" type="text/css" />
 </head>
@@ -46,12 +46,7 @@
                         <li><a href="autor.php">Autor</a></li>
                     </ul>                              
                 </li>
-                
-
-
             </ol>
-
-
         </div>
     </div>
 
@@ -87,7 +82,7 @@
             </div>
         </div>
         <div class="footer">
-             Dominik Szczepański - najquiz.com &copy; 2023 
+             Dominik - najquiz.com &copy; 2023 - <?php echo date('Y'); ?>
 
 
         </div>
@@ -95,6 +90,7 @@
     </div>
 
     
+    <!-- JS script: sticki menu & jQuery -->
 	<script src="jquery-1.11.3.min.js"></script>
 	
     <script>
