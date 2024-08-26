@@ -24,8 +24,8 @@
         </div>
         <div class="nav">
             <ol>
-                <li><a href="witam.php">Strona główna</a></li>
-                <li><a href="Quiz1.php">Graj</a> </a>   
+                <li><a href="index.php">Strona główna</a></li>
+                <li><a href="start.php">Graj</a> </a>   
                 </li>
                 <li><a href="#">Kontakt</a>
                     <ul>

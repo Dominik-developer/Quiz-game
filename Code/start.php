@@ -25,7 +25,7 @@
         </div>
         <div class="nav">
             <ol>
-                <li><a href="witam.php">Strona główna</a></li>
+                <li><a href="index.php">Strona główna</a></li>
                 <li>Graj</li>
                 <li><a href="#">Kontakt</a>
                     <ul>
@@ -75,7 +75,7 @@
 
     ?>
 
-        <form action=Quiz2.php method="post">
+        <form action=result.php method="post">
             
     <div class="content">
 
